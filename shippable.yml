@@ -9,3 +9,9 @@ php:
 build:
   ci:
     - php --version
+    
+  pre_ci_boot:
+    image_name: drydock/u14php
+    image_tag: prod
+    pull: true
+    
