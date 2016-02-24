@@ -7,13 +7,13 @@ php:
   - 7.0
   
 services:
-  - mysql
-  - postgres
-  - mongodb
-  - elastic search
-  - redis
-  - memcache
-  - rabbitmq
+#  - mysql
+ # - postgres
+  #- mongodb
+  - elasticsearch
+  #- redis
+  #- memcache
+  #- rabbitmq
   
 build:
   ci:
