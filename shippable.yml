@@ -1,5 +1,7 @@
+#language
 language: php
 
+#Version number
 php:
   - 5.4
   - 5.5
@@ -16,10 +18,11 @@ services:
   - rabbitmq
   
 build:
-  ci:
-    - php --version
-    
+
   pre_ci_boot:
     image_name: drydock/u12phppls
     image_tag: prod
     pull: true
+    
+  ci:
+    - php --version
