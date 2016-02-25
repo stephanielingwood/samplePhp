@@ -6,6 +6,18 @@ php:
   - 5.6
   - 7.0
   
+services:
+  - mysql
+  - postgres
+  - mongodb
+  - elasticsearch
+  - redis
+  - memcache
+  - rabbitmq
+  - rethinkdb
+  - couchdb
+  - neo4j
+  
 build:
   ci:
     - php --version
