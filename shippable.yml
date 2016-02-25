@@ -1,5 +1,7 @@
+#Language
 language: php
 
+#Version number
 php:
   - 5.4
   - 5.5
@@ -7,11 +9,11 @@ php:
   - 7.0
   
 build:
-  ci:
-    - php --version
-    
+
   pre_ci_boot:
     image_name: drydock/u14php
     image_tag: prod
     pull: true
     
+  ci:
+    - php --version
