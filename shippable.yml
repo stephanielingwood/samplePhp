@@ -1,5 +1,7 @@
+#language
 language: php
 
+#Version number
 php:
   - 5.4
   - 5.5
@@ -7,19 +9,20 @@ php:
   - 7.0
   
 services:
- # - mysql
- # - postgres
- # - mongodb
+  - mysql
+  - postgres
+  - mongodb
   - elasticsearch
- # - redis
- # - memcache
- #- rabbitmq
+  - redis
+  - memcache
+  - rabbitmq
   
 build:
-  ci:
-    - php --version
-    
+  
   pre_ci_boot:
     image_name: drydock/u14phppls
     image_tag: prod
     pull: true
+    
+  ci:
+    - php --version
