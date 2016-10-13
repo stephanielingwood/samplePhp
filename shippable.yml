@@ -9,10 +9,11 @@ php:
 build:
   ci:
     - php --version
-    - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    - echo "xdebug.remote_autostart=0" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    - echo "xdebug.remote_enable=0" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    - echo "xdebug.profiler_enable=0" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    - phpenv rehash
+#    - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+#    - echo "xdebug.remote_autostart=0" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+#    - echo "xdebug.remote_enable=0" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+#    - echo "xdebug.profiler_enable=0" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+#    - cat $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+    - phpenv config-rm xdebug.ini
+#    - phpenv rehash
     - php --version
